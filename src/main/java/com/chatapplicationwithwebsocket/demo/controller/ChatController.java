@@ -24,6 +24,9 @@ public class ChatController {
     public void sendMessage(@Payload ChatMessage chatMessage) {
         // Handle received message
         messagingTemplate.convertAndSend("/topic/public", chatMessage);
+
+        //making commit
+        System.out.println("making changes");
     }
 }
 
